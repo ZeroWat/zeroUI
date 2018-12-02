@@ -8,7 +8,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class RightSideComponent implements OnInit {
 
   @Output() toggle = new EventEmitter();
-  isShowMenu = false;
+  isShowMenu = true;
 
   constructor() { }
 
@@ -18,10 +18,10 @@ export class RightSideComponent implements OnInit {
   toggleSideMenu() {
     if (this.isShowMenu) {
       this.isShowMenu = false;
-      this.toggle.emit(false);
+      this.toggle.emit('0');
     } else {
       this.isShowMenu = true;
-      this.toggle.emit(true);
+      this.toggle.emit('240px');
     }
   }
 }

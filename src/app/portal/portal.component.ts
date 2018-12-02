@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortalComponent implements OnInit {
 
-  isShowMenu = false;
+  menuWith: any;
 
   constructor() { }
 
@@ -15,7 +15,6 @@ export class PortalComponent implements OnInit {
   }
 
   toggleMenu(event) {
-    console.log(event);
-    this.isShowMenu = event;
+    this.menuWith = event;
   }
 }

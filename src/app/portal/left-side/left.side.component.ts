@@ -7,23 +7,17 @@ import {Component, Input, OnInit, ViewChild} from '@angular/core';
 })
 export class LeftSideComponent implements OnInit {
 
-  @Input() isShowMenu: boolean;
-  @ViewChild('menu') menu;
-  menuWith: any;
+  sideMenuWith = '';
 
   constructor() { }
 
   ngOnInit() {
-    this.toggleMenu();
   }
 
-  toggleMenu() {
-    debugger;
-    if (this.isShowMenu) {
-      console.log(this.isShowMenu);
-      this.menuWith = '240px';
-    } else {
-      this.menuWith = '0';
-    }
+  @Input()
+  set menuWith(sideMenuWith: string) {
+    this.sideMenuWith = sideMenuWith;
   }
+
+  get menuWith(): string { return this.sideMenuWith; }
 }
