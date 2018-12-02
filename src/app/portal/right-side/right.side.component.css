@@ -1,0 +1,31 @@
+.zero-ui-header{
+  border-bottom: 1px solid #f6f6f6;
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 1000;
+}
+.zero-ui-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+.zero-ui-header .zero-ui-nav-left{
+  position: absolute;
+  left: 240px;
+  top: 0;
+}
+.zero-ui-nav-left .nav-item{
+  height: 50px;
+  line-height: 50px;
+  margin: 0 20px;
+  display: inline-block;
+  position: relative;
+  *zoom: 1;
+  vertical-align: middle;
+}
+.nav-item a{
+  color: #333;
+  font-size: 14px;
+}

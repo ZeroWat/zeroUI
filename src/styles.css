@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~font-awesome/css/font-awesome.min.css';
+body,ul{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body{
+  font: 14px Helvetica Neue,Helvetica,PingFang SC,Tahoma,Arial,sans-serif;
+}
