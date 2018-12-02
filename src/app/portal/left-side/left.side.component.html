@@ -3,5 +3,19 @@
     <div class="zero-ui-logo">
       <span>zeroUiAdmin</span>
     </div>
+    <ul class="zero-ui-nav">
+      <li class="zero-ui-nav-item" (click)="toggleNav()" [style.height]="navHeight">
+        <a href="#">
+          <i class="fa fa-home"></i>
+          <cite>首页</cite>
+          <span [class]="navHeight === 'auto' ? 'zero-ui-more' : 'zero-ui-more triangle-down'"></span>
+        </a>
+        <dl class="nav-item-child">
+          <dd>
+            <a href="#">控制台</a>
+          </dd>
+        </dl>
+      </li>
+    </ul>
   </div>
 </div>

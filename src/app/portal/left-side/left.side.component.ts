@@ -8,6 +8,7 @@ import {Component, Input, OnInit, ViewChild} from '@angular/core';
 export class LeftSideComponent implements OnInit {
 
   sideMenuWith = '';
+  navHeight = 'auto';
 
   constructor() { }
 
@@ -20,4 +21,12 @@ export class LeftSideComponent implements OnInit {
   }
 
   get menuWith(): string { return this.sideMenuWith; }
+
+  toggleNav() {
+    if (this.navHeight === 'auto') {
+      this.navHeight = '56px';
+    } else {
+      this.navHeight = 'auto';
+    }
+  }
 }
