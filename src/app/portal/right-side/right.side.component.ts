@@ -18,7 +18,7 @@ export class RightSideComponent implements OnInit {
   toggleSideMenu() {
     if (this.isShowMenu) {
       this.isShowMenu = false;
-      this.toggle.emit('0');
+      this.toggle.emit('56px');
     } else {
       this.isShowMenu = true;
       this.toggle.emit('240px');

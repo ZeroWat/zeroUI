@@ -17,7 +17,7 @@ export class LeftSideComponent implements OnInit {
 
   @Input()
   set menuWith(sideMenuWith: string) {
-    this.sideMenuWith = sideMenuWith;
+    this.sideMenuWith = (sideMenuWith && sideMenuWith.trim()) || '240px';
   }
 
   get menuWith(): string { return this.sideMenuWith; }

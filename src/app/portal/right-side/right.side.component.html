@@ -1,9 +1,31 @@
 <div class="zero-ui-header">
-  <ul class="zero-ui-nav zero-ui-nav-left">
+  <ul [class]="isShowMenu ? 'zero-ui-nav zero-ui-nav-left' : 'zero-ui-nav zero-ui-nav-left close-menu'">
     <li class="nav-item" (click)="toggleSideMenu()">
       <a href="#" title="侧边伸缩">
         <i class="fa fa-navicon"></i>
       </a>
     </li>
   </ul>
+</div>
+<div [class]="isShowMenu ? 'zero-ui-page-tabs' : 'zero-ui-page-tabs close-menu'">
+  <div class="page-control prev-page">
+    <i class="fa fa-angle-double-left"></i>
+  </div>
+  <div class="page-control next-page">
+    <i class="fa fa-angle-double-right"></i>
+  </div>
+  <div class="zero-page-tabs">
+    <ul class="zero-tab-title">
+      <li class="tab-active"><i class="fa fa-home"></i></li>
+      <li>
+        <span>iframe标题</span>
+        <i class="fa fa-close"></i>
+      </li>
+    </ul>
+  </div>
+</div>
+<div [class]="isShowMenu ? 'zero-ui-tab-body' : 'zero-ui-tab-body close-menu'">
+  <div class="tab-body-item zero-ui-show">
+    <iframe src="http://www.baidu.com" frameborder="0" class="zero-ui-iframe"></iframe>
+  </div>
 </div>

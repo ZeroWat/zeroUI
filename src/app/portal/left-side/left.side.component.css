@@ -13,6 +13,9 @@
   transition: all .3s;
   -webkit-transition: all .3s;
 }
+.close-menu{
+  width: 56px !important;
+}
 .zero-ui-side-menu .zero-ui-side-scroll{
   width: 240px;
   height: 100%;
@@ -59,6 +62,21 @@
 .zero-ui-nav-item > a{
   padding-top: 8px;
   padding-bottom: 8px;
+}
+.zero-ui-nav-item >a::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform:scale(1, 0);
+  transition: all .2s;
+  border-left: 3px solid #009688;
+}
+.zero-ui-nav-item > a:hover::before{
+  transform:scale(1);
+  transition:all .2s;
 }
 .zero-ui-nav-item a i{
   position: absolute;
