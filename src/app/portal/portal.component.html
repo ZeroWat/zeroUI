@@ -1,4 +1,4 @@
 <div class="zero-ui-wrap">
-  <app-left-side [menuWith]="menuWith"></app-left-side>
-  <app-right-side (toggle)="toggleMenu($event)"></app-right-side>
+  <app-left-side [menuWith]="menuWith" (getIframe)="getIframe($event)"></app-left-side>
+  <app-right-side (toggle)="toggleMenu($event)" [iframeInfo]="iframeInfo"></app-right-side>
 </div>

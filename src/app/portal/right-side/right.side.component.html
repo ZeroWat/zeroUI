@@ -16,16 +16,23 @@
   </div>
   <div class="zero-page-tabs">
     <ul class="zero-tab-title">
-      <li class="tab-active"><i class="fa fa-home"></i></li>
-      <li>
-        <span>iframe标题</span>
-        <i class="fa fa-close"></i>
+      <li class="tab-active" (click)="openPage('home')"><i class="fa fa-home"></i></li>
+      <li *ngFor="let item of tabs">
+        <span (click)="openPage(item)">{{item?.title}}</span>
+        <i class="fa fa-close" (click)="closeTab(item)"></i>
       </li>
     </ul>
   </div>
 </div>
 <div [class]="isShowMenu ? 'zero-ui-tab-body' : 'zero-ui-tab-body close-menu'">
-  <div class="tab-body-item zero-ui-show">
-    <iframe src="http://www.baidu.com" frameborder="0" class="zero-ui-iframe"></iframe>
+  <div>
+    <div [class]="isHome ? 'tab-body-item zero-ui-show' : 'tab-body-item'">
+      <iframe src="http://www.uihtml.cn" frameborder="0" class="zero-ui-iframe"></iframe>
+    </div>
+  </div>
+  <div *ngFor="let item of tabs">
+    <div [class]="item.active ? 'tab-body-item zero-ui-show' : 'tab-body-item'">
+      <iframe [src]="transformURL(item?.url)" frameborder="0" class="zero-ui-iframe"></iframe>
+    </div>
   </div>
 </div>

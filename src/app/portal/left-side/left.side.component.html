@@ -4,15 +4,15 @@
       <span>zeroUiAdmin</span>
     </div>
     <ul class="zero-ui-nav">
-      <li class="zero-ui-nav-item" (click)="toggleNav()" [style.height]="navHeight">
-        <a href="#">
+      <li class="zero-ui-nav-item" [style.height]="navHeight" *ngFor="let item of menu">
+        <a (click)="toggleNav()">
           <i class="fa fa-home"></i>
-          <cite *ngIf="menuWith === '240px'">首页</cite>
+          <cite *ngIf="menuWith === '240px'">{{item.title}}</cite>
           <span *ngIf="menuWith === '240px'" [class]="navHeight === 'auto' ? 'zero-ui-more' : 'zero-ui-more triangle-down'"></span>
         </a>
         <dl class="nav-item-child" *ngIf="menuWith === '240px'">
-          <dd>
-            <a href="#">控制台</a>
+          <dd *ngFor="let child of item.children">
+            <a (click)="openIframe(child)">{{child.title}}</a>
           </dd>
         </dl>
       </li>

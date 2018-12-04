@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PortalComponent implements OnInit {
 
   menuWith: any;
+  iframeInfo: any;
 
   constructor() { }
 
@@ -16,5 +17,8 @@ export class PortalComponent implements OnInit {
 
   toggleMenu(event) {
     this.menuWith = event;
+  }
+  getIframe(event) {
+    this.iframeInfo = event;
   }
 }

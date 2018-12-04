@@ -125,3 +125,6 @@
 .nav-item-child dd{
   position: relative;
 }
+.nav-item-child dd a{
+  cursor: pointer;
+}
